@@ -1,4 +1,4 @@
-package com.example.webContent;
+package com.example.webContent.controller;
 
 
 import com.example.webContent.accesDB.Message;
@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
-public class GreetingController {
+public class MainController {
 
     @Autowired
     private IMessageRepository iMessageRepository;
