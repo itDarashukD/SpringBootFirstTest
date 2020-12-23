@@ -28,13 +28,13 @@ public class RegistrationController {
         User userFromDb = userRepository.findByUsername(user.getUsername());
 
         if (userFromDb != null) {
-            model.put("message", "User exists!");
+            model.put("message", "User exists!");//есл итакой Юзер существуе, то возвращаем форму регистрациии
             return "registration";
         }
 
         user.setActive(true);
         user.setRoles(Collections.singleton(Role.USER));
-        userRepository.save(user);
+        userRepository.save(user);//если такого еще нет , то добавляем юзера
 
         return "login";
     }
